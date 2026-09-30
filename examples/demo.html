@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthropic Design System &mdash; Showcase</title>
+  <!-- Google Fonts: Newsreader (Serif 500), Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#f5f4ed',
+            ivory: '#faf9f5',
+            sand: '#e8e6dc',
+            terracotta: { DEFAULT: '#c96442', hover: '#b85736' },
+            coral: '#d97757',
+            nearblack: '#141413',
+            surface: '#30302e',
+            charcoal: '#4d4c48',
+            olive: '#5e5d59',
+            stone: '#87867f',
+            silver: '#b0aea5',
+            cream: '#f0eee6',
+            warmborder: '#e8e6dc',
+            ringwarm: '#d1cfc5',
+            focusblue: '#3898ec'
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            whisper: '0 4px 24px rgba(20, 20, 19, 0.05)',
+            ring: '0 0 0 1px #d1cfc5',
+            'ring-terracotta': '0 0 0 1px #c96442',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-parchment text-nearblack font-sans antialiased selection:bg-terracotta/20 selection:text-nearblack">
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full bg-parchment/85 backdrop-blur-md border-b border-cream">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="font-serif font-medium text-2xl tracking-tight text-nearblack">Anthropic Design</span>
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-olive">
+        <a href="#foundations" class="hover:text-nearblack transition-colors">Foundations</a>
+        <a href="#components" class="hover:text-nearblack transition-colors">Components</a>
+        <a href="#models" class="hover:text-nearblack transition-colors">Model Tiers</a>
+        <a href="#terminal" class="hover:text-nearblack transition-colors">Developer</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button class="px-3.5 py-1.5 text-sm font-medium text-charcoal bg-sand hover:bg-[#dedcd0] border border-transparent rounded-lg shadow-ring transition-all">
+          Sign in
+        </button>
+        <button class="px-4 py-1.5 text-sm font-medium text-ivory bg-terracotta hover:bg-terracotta-hover rounded-xl shadow-ring-terracotta transition-colors">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Hero Section -->
+  <section class="relative pt-24 pb-20 px-6 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sand/80 border border-warmborder text-xs font-medium text-charcoal mb-8 tracking-wide">
+      <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+      <span>Authentic Claude.ai Visual DNA</span>
+    </div>
+
+    <h1 class="font-serif font-medium text-5xl md:text-6xl lg:text-7xl leading-[1.08] text-nearblack tracking-tight mb-8 max-w-4xl mx-auto">
+      A literary salon reimagined <br class="hidden sm:inline" />
+      for modern web interfaces.
+    </h1>
+
+    <p class="font-sans text-olive text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+      Warm parchment canvas, tactile terracotta accents, and weight-500 serif typography. Designed to communicate calm intellectual authority and human warmth.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button class="w-full sm:w-auto px-6 py-3 text-base font-medium text-ivory bg-terracotta hover:bg-terracotta-hover rounded-xl shadow-ring-terracotta transition-colors">
+        Read Specification
+      </button>
+      <button class="w-full sm:w-auto px-6 py-3 text-base font-medium text-charcoal bg-sand hover:bg-[#dedcd0] rounded-xl shadow-ring transition-all">
+        Explore Components
+      </button>
+    </div>
+  </section>
+
+  <!-- 3-Column Core Foundations -->
+  <section id="foundations" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-ivory border border-cream rounded-2xl p-8 shadow-whisper hover:border-warmborder transition-all">
+        <div class="w-10 h-10 rounded-xl bg-sand flex items-center justify-center text-terracotta font-serif font-medium text-lg mb-6">01</div>
+        <h3 class="font-serif font-medium text-2xl text-nearblack mb-3">Parchment Base</h3>
+        <p class="font-sans text-olive text-sm leading-relaxed">
+          The canvas evokes archival book stock rather than a digital screen. Never cold white, always gently warm (#f5f4ed).
+        </p>
+      </div>
+
+      <div class="bg-ivory border border-cream rounded-2xl p-8 shadow-whisper hover:border-warmborder transition-all">
+        <div class="w-10 h-10 rounded-xl bg-sand flex items-center justify-center text-terracotta font-serif font-medium text-lg mb-6">02</div>
+        <h3 class="font-serif font-medium text-2xl text-nearblack mb-3">Serif 500 Weight</h3>
+        <p class="font-sans text-olive text-sm leading-relaxed">
+          All headlines strictly rely on Newsreader or Georgia at medium weight 500, with tight leading that reads like literature.
+        </p>
+      </div>
+
+      <div class="bg-ivory border border-cream rounded-2xl p-8 shadow-whisper hover:border-warmborder transition-all">
+        <div class="w-10 h-10 rounded-xl bg-sand flex items-center justify-center text-terracotta font-serif font-medium text-lg mb-6">03</div>
+        <h3 class="font-serif font-medium text-2xl text-nearblack mb-3">Whisper Elevation</h3>
+        <p class="font-sans text-olive text-sm leading-relaxed">
+          Warm boundary rings (0 0 0 1px) and diffuse whisper shadows replace muddy, harsh drop shadows for quiet depth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Model Comparison Grid -->
+  <section id="models" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+      <h2 class="font-serif font-medium text-4xl text-nearblack mb-3">Model Family Architecture</h2>
+      <p class="font-sans text-olive text-base">Graduated performance across intelligent operational thresholds.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Haiku -->
+      <div class="bg-ivory border border-cream rounded-2xl p-6 shadow-whisper flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-stone">Tier I</span>
+          <h3 class="font-serif font-medium text-2xl text-nearblack mt-1 mb-2">Claude 3.5 Haiku</h3>
+          <p class="font-sans text-olive text-sm mb-6">Sub-second latency with near-frontier reasoning power.</p>
+        </div>
+        <div class="border-t border-cream pt-4 flex items-center justify-between text-xs text-stone font-mono">
+          <span>Speed: Instant</span>
+          <span class="text-terracotta font-medium">Ultra Fast</span>
+        </div>
+      </div>
+
+      <!-- Sonnet (Featured) -->
+      <div class="bg-ivory border-2 border-terracotta/40 rounded-2xl p-6 shadow-whisper flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-terracotta/10 text-terracotta text-[10px] font-mono uppercase tracking-wider font-semibold">
+          Recommended
+        </div>
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-terracotta">Tier II</span>
+          <h3 class="font-serif font-medium text-2xl text-nearblack mt-1 mb-2">Claude 3.7 Sonnet</h3>
+          <p class="font-sans text-olive text-sm mb-6">Frontier reasoning intelligence with hybrid speculative thinking mode.</p>
+        </div>
+        <div class="border-t border-cream pt-4 flex items-center justify-between text-xs text-stone font-mono">
+          <span>Benchmark: #1</span>
+          <span class="text-terracotta font-medium">Coding &amp; Math</span>
+        </div>
+      </div>
+
+      <!-- Opus -->
+      <div class="bg-ivory border border-cream rounded-2xl p-6 shadow-whisper flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-stone">Tier III</span>
+          <h3 class="font-serif font-medium text-2xl text-nearblack mt-1 mb-2">Claude 3 Opus</h3>
+          <p class="font-sans text-olive text-sm mb-6">Deep analytical depth on massively complex multi-domain reasoning.</p>
+        </div>
+        <div class="border-t border-cream pt-4 flex items-center justify-between text-xs text-stone font-mono">
+          <span>Depth: Maximum</span>
+          <span class="text-terracotta font-medium">Synthesis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Terminal Section -->
+  <section id="terminal" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="rounded-2xl overflow-hidden border border-warmborder bg-sand/60 shadow-whisper">
+      <div class="px-5 py-3 border-b border-warmborder flex items-center justify-between bg-sand/90">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-[#e2b7a9] inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-[#dedcd0] inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-[#c2c0b6] inline-block"></span>
+          <span class="ml-3 font-mono text-xs text-stone">claude-agent-config.sh</span>
+        </div>
+        <span class="font-mono text-xs text-stone">bash</span>
+      </div>
+      <pre class="p-6 font-mono text-xs sm:text-sm text-nearblack leading-relaxed overflow-x-auto bg-[#faf8f3]"><code><span class="text-stone"># Import the Anthropic Design Skill in your coding agent</span>
+<span class="text-terracotta">npx</span> @earendil-works/pi-coding-agent skill add anthropic-design
+
+<span class="text-stone"># Or instruct your LLM with the authentic visual tokens</span>
+<span class="text-olive">canvas</span>=<span class="text-coral">"#f5f4ed"</span>
+<span class="text-olive">brand</span>=<span class="text-coral">"#c96442"</span>
+<span class="text-olive">typography</span>=<span class="text-coral">"Newsreader:500"</span></code></pre>
+    </div>
+  </section>
+
+  <!-- Dark "Chapter Alternation" Section -->
+  <section class="w-full bg-nearblack text-ivory py-24 px-6 mt-16 border-t border-surface">
+    <div class="max-w-5xl mx-auto">
+      <div class="max-w-2xl">
+        <span class="text-xs font-mono uppercase tracking-widest text-coral mb-4 block">Chapter II &mdash; Constitutional Foundations</span>
+        <h2 class="font-serif font-medium text-4xl md:text-5xl text-ivory leading-tight mb-6">
+          Intelligence guided by human principles.
+        </h2>
+        <p class="font-sans text-silver text-base md:text-lg leading-relaxed mb-8">
+          The alternating dark chapter breaks the cadence of continuous reading, giving eyes pause and adding dramatic editorial weight to key technical declarations.
+        </p>
+        <div class="flex items-center gap-4">
+          <button class="px-5 py-2.5 text-sm font-medium text-ivory bg-terracotta hover:bg-terracotta-hover rounded-xl shadow-ring-terracotta transition-colors">
+            Explore System Architecture
+          </button>
+          <button class="px-5 py-2.5 text-sm font-medium text-silver hover:text-ivory bg-surface rounded-xl border border-surface transition-colors">
+            View Design Tokens
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full bg-parchment border-t border-cream py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-stone gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-serif font-medium text-nearblack text-sm">Anthropic Design Skill</span>
+        <span>&bull;</span>
+        <span>Enhanced for Coding Agents</span>
+      </div>
+      <div>
+        <span>Based on <a href="https://github.com/nexu-io/open-design" class="text-olive underline hover:text-terracotta">nexu-io/open-design</a> under Apache-2.0</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
